@@ -1,0 +1,1856 @@
+[
+  {
+    "id": "prod_001",
+    "name": "Blue Buffalo Life Protection Formula Dog Food",
+    "description": "This premium dry dog food features real meat as the first ingredient, supplemented with whole grains, fruits, and vegetables for optimal health. Formulated for adult dogs, it supports immune system health and promotes a healthy coat.",
+    "price": 49.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "deboned chicken",
+      "brown rice",
+      "barley",
+      "oatmeal",
+      "peas"
+    ],
+    "dietary_tags": [
+      "natural",
+      "grain-free"
+    ],
+    "brand": "Blue Buffalo",
+    "life_stage": "adult",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_002",
+    "name": "Purina Pro Plan Savor Adult Dry Dog Food",
+    "description": "Made with real chicken and rice, this dry dog food provides the essential nutrients your active adult dog needs. Contains antioxidants for a healthy immune system and is highly digestible.",
+    "price": 39.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken",
+      "rice",
+      "corn gluten meal",
+      "barley",
+      "chicken by-product meal"
+    ],
+    "dietary_tags": [
+      "high-protein"
+    ],
+    "brand": "Purina Pro Plan",
+    "life_stage": "adult",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_003",
+    "name": "Wellness CORE Grain-Free Beef & Venison Recipe",
+    "description": "This grain-free dry dog food is packed with high-quality protein from beef and venison, ensuring that your dog receives a balanced diet with no fillers. Ideal for active and sporting dogs.",
+    "price": 64.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "deboned beef",
+      "venison meal",
+      "potatoes",
+      "peas",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Wellness",
+    "life_stage": "adult",
+    "size_category": "large"
+  },
+  {
+    "id": "prod_004",
+    "name": "Royal Canin Size Health Nutrition Small Adult Dry Dog Food",
+    "description": "Specially formulated for small breed adults, this dog food helps maintain a healthy weight while providing balanced nutrition with antioxidants and fiber. Small kibble is easy to chew for your little friend.",
+    "price": 32.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken meal",
+      "corn",
+      "brewers rice",
+      "animal fat",
+      "wheat gluten"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Royal Canin",
+    "life_stage": "adult",
+    "size_category": "small"
+  },
+  {
+    "id": "prod_005",
+    "name": "Hill's Science Diet Adult Chicken Recipe Wet Dog Food",
+    "description": "This wet dog food is made with high-quality protein from real chicken and is formulated to support healthy digestion and lean muscle. Perfect for picky eaters and provides essential nutrients.",
+    "price": 23.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken",
+      "water",
+      "beef liver",
+      "carrots",
+      "potatoes"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hill's Science Diet",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_006",
+    "name": "Zuke's Mini Naturals Training Treats",
+    "description": "These small, soft dog treats are perfect for training and rewarding your pup. Made with real chicken and no artificial colors or preservatives. They're also low in calories, making them great for everyday use.",
+    "price": 8.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken",
+      "barley",
+      "oatmeal",
+      "carrots",
+      "blueberries"
+    ],
+    "dietary_tags": [
+      "natural",
+      "grain-free"
+    ],
+    "brand": "Zuke's",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_007",
+    "name": "Purina ONE Natural Adult Dog Food",
+    "description": "This delicious dog food features real turkey as the first ingredient and is formulated to provide 100% nutrition for adult dogs. It promotes strong muscles and healthy energy levels.",
+    "price": 36.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "turkey",
+      "rice",
+      "corn gluten meal",
+      "soybean meal",
+      "animal fat"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Purina ONE",
+    "life_stage": "adult",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_008",
+    "name": "Taste of the Wild High Prairie Canine Recipe",
+    "description": "This grain-free formula features roasted bison and roasted roasted venison, providing a taste your dog will love and a high-quality protein source. It’s enriched with fruits and vegetables for antioxidants.",
+    "price": 45.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "bison",
+      "roasted venison",
+      "sweet potatoes",
+      "peas",
+      "potatoes"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Taste of the Wild",
+    "life_stage": "adult",
+    "size_category": "large"
+  },
+  {
+    "id": "prod_009",
+    "name": "Merrick Grain-Free Texas Beef & Sweet Potato Recipe",
+    "description": "Providing a high-protein diet, this grain-free dry dog food features real deboned beef and sweet potatoes, ensuring a healthy and balanced meal for your dog. Ideal for active dogs of all sizes.",
+    "price": 63.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "deboned beef",
+      "sweet potatoes",
+      "potatoes",
+      "peas",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Merrick",
+    "life_stage": "all",
+    "size_category": "large"
+  },
+  {
+    "id": "prod_010",
+    "name": "Solid Gold Leaping Waters with Cold Water Salmon & Vegetable Recipe",
+    "description": "This wet dog food is crafted with high-quality salmon and fresh vegetables, making it a tasty and nutritious option for your dog. It's grain and gluten-free, perfect for pups with sensitivities.",
+    "price": 45.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "salmon",
+      "chickpeas",
+      "carrots",
+      "potatoes",
+      "peas"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "natural"
+    ],
+    "brand": "Solid Gold",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_011",
+    "name": "Blue Buffalo Wilderness Salmon Recipe Cat Food",
+    "description": "This high-protein dry cat food contains real salmon as the first ingredient and is free from grains. It's formulated to meet the nutritional needs of your active cat.",
+    "price": 47.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "deboned salmon",
+      "chicken meal",
+      "potatoes",
+      "peas",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Blue Buffalo",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_012",
+    "name": "Purina Pro Plan Savor Adult Dry Cat Food",
+    "description": "With real chicken as the first ingredient, this dry cat food is designed to support the overall health of your adult cat. Rich in protein and includes antioxidants for a strong immune system.",
+    "price": 39.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken",
+      "rice",
+      "corn gluten meal",
+      "beef fat",
+      "fish meal"
+    ],
+    "dietary_tags": [
+      "high-protein"
+    ],
+    "brand": "Purina Pro Plan",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_013",
+    "name": "Wellness CORE Grain-Free Indoor Chicken Recipe Cat Food",
+    "description": "This grain-free formula provides a high-protein diet with real chicken, designed specifically for indoor cats. It helps maintain a healthy weight and supports digestion.",
+    "price": 45.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "deboned chicken",
+      "turkey meal",
+      "potatoes",
+      "peas",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Wellness",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_014",
+    "name": "Royal Canin Feline Health Nutrition Indoor Adult Dry Cat Food",
+    "description": "With a focus on weight management and digestive health, this dry cat food is specially formulated for adult indoor cats. It provides a balanced diet for optimal feline health.",
+    "price": 35.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "corn",
+      "chicken meal",
+      "wheat gluten",
+      "rice",
+      "animal fat"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Royal Canin",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_015",
+    "name": "Hill's Science Diet Adult Cat Food with Chicken",
+    "description": "This wet cat food is made with high-quality chicken and is designed to provide complete nutrition for adult cats. It promotes healthy digestion and a shiny coat.",
+    "price": 20.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken",
+      "water",
+      "pork liver",
+      "carrots",
+      "rice"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hill's Science Diet",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_016",
+    "name": "Friskies Shredded Chicken & Gravy Wet Cat Food",
+    "description": "A delicious and affordable wet cat food option, this shredded chicken recipe is smothered in rich gravy, making it a favorite among cats. Provides 100% complete and balanced nutrition.",
+    "price": 16.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken",
+      "water",
+      "liver",
+      "corn starch",
+      "wheat gluten"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Friskies",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_017",
+    "name": "Fancy Feast Classic Pate Chicken Feast",
+    "description": "This gourmet wet cat food features a rich pate made with real chicken, providing a taste and texture that cats love. It’s formulated to meet the needs of adult cats.",
+    "price": 24.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken",
+      "water",
+      "chicken liver",
+      "pork liver",
+      "meat by-products"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Fancy Feast",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_018",
+    "name": "Meow Mix Original Choice Dry Cat Food",
+    "description": "This dry cat food provides a variety of flavors and nutrients that your cat will love. With real chicken and tuna, it supports healthy skin and shiny coat.",
+    "price": 19.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "corn",
+      "chicken by-product meal",
+      "wheat",
+      "animal fat",
+      "fish meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Meow Mix",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_019",
+    "name": "Tidy Cats Lightweight Cat Litter",
+    "description": "This lightweight cat litter is easy to handle and provides strong odor control, ensuring your home stays fresh and clean. Its clumping formula makes cleanup a breeze.",
+    "price": 12.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "clay",
+      "fragrance"
+    ],
+    "dietary_tags": [],
+    "brand": "Tidy Cats",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_020",
+    "name": "PetSafe ScoopFree Ultra Self-Cleaning Cat Litter Box",
+    "description": "This automatic litter box cleans itself, allowing you to enjoy more time with your cat. It uses crystal litter to absorb moisture and control odors, ideal for busy pet owners.",
+    "price": 149.99,
+    "target_pet": "cat",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "PetSafe",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_021",
+    "name": "Kaytee Exact Rainbow Bird Food",
+    "description": "This nutritious diet for birds is a blend of pellets and seeds designed to meet the dietary needs of small birds. It supports healthy feather growth and vibrant color.",
+    "price": 14.99,
+    "target_pet": "bird",
+    "ingredients": [
+      "corn",
+      "wheat",
+      "millet",
+      "peanuts",
+      "sunflower seeds"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Kaytee",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_022",
+    "name": "Harrison's Bird Foods High Potency Coarse",
+    "description": "This organic bird food is specially formulated for breeding and molting birds. It contains a blend of organic seeds, grains, and vitamins for optimal health.",
+    "price": 24.99,
+    "target_pet": "bird",
+    "ingredients": [
+      "organic sunflower seeds",
+      "organic millet",
+      "organic oats",
+      "organic barley"
+    ],
+    "dietary_tags": [
+      "organic"
+    ],
+    "brand": "Harrison's Bird Foods",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_023",
+    "name": "ZuPreem FruitBlend Flavor Bird Food",
+    "description": "A colorful and nutritious mix that provides essential nutrients for your pet bird. This diet includes fruit-flavored pellets to entice your bird and keep them happy.",
+    "price": 17.99,
+    "target_pet": "bird",
+    "ingredients": [
+      "corn",
+      "wheat flour",
+      "dried fruit",
+      "sugar",
+      "vegetable oil"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "ZuPreem",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_024",
+    "name": "Kaytee Bird Litter",
+    "description": "This absorbent litter is made from natural materials and is designed to keep your bird's cage clean and dry. It provides a comfortable environment for your pet.",
+    "price": 9.99,
+    "target_pet": "bird",
+    "ingredients": [
+      "corn cob",
+      "sawdust"
+    ],
+    "dietary_tags": [],
+    "brand": "Kaytee",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_025",
+    "name": "Tetra Goldfish Flakes",
+    "description": "These fish food flakes are formulated for goldfish and provide complete nutrition for a healthy, vibrant life. The easy-to-digest formula promotes growth and vitality.",
+    "price": 7.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "wheat flour",
+      "corn gluten meal",
+      "spirulina"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_026",
+    "name": "Hikari Betta Bio-Gold Fish Food",
+    "description": "Specially formulated for bettas, this fish food contains high-quality ingredients to promote vibrant color and optimal growth. The pellets are designed to enhance palatability.",
+    "price": 9.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "dehydro fish meal",
+      "wheat flour",
+      "fish oil",
+      "spirulina"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hikari",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_027",
+    "name": "API Fish Food Pellets",
+    "description": "These sinking pellets are designed to meet the nutritional needs of your bottom-feeding fish. High in protein, they support growth and overall health.",
+    "price": 11.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "wheat flour",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "API",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_028",
+    "name": "Tetra Pond Sticks",
+    "description": "These floating sticks are formulated for pond fish, providing balanced nutrition and promoting healthy growth. They are easy to digest and will not cloud your pond water.",
+    "price": 14.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "wheat flour",
+      "corn gluten meal",
+      "spirulina"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_029",
+    "name": "Purina Pro Plan Focus Sensitive Skin & Stomach Dog Food",
+    "description": "This specialized formula is designed for dogs with food sensitivities, made with salmon as the first ingredient and rice for easy digestion. It supports skin and coat health.",
+    "price": 52.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "salmon",
+      "rice",
+      "barley",
+      "oatmeal",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "limited-ingredient"
+    ],
+    "brand": "Purina Pro Plan",
+    "life_stage": "adult",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_030",
+    "name": "Solid Gold Hundchen Flocken Dry Dog Food",
+    "description": "A holistic dry dog food with chicken and brown rice, this formula is rich in omega fatty acids for healthy skin and coat. It's free from corn, wheat, and soy.",
+    "price": 39.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken meal",
+      "brown rice",
+      "barley",
+      "oatmeal",
+      "carrots"
+    ],
+    "dietary_tags": [
+      "natural",
+      "grain-free"
+    ],
+    "brand": "Solid Gold",
+    "life_stage": "puppy",
+    "size_category": "small"
+  },
+  {
+    "id": "prod_031",
+    "name": "Merrick Grain-Free Salmon & Sweet Potato Recipe",
+    "description": "This grain-free dog food is made with real deboned salmon and sweet potatoes, providing essential nutrients and a taste your dog will love. Ideal for dogs with grain sensitivities.",
+    "price": 59.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "deboned salmon",
+      "sweet potatoes",
+      "potatoes",
+      "peas",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Merrick",
+    "life_stage": "all",
+    "size_category": "large"
+  },
+  {
+    "id": "prod_032",
+    "name": "Hill's Science Diet Puppy Chicken Recipe Dry Dog Food",
+    "description": "This puppy food is formulated with high-quality protein from chicken and essential nutrients to support healthy growth and development. Perfect for growing pups.",
+    "price": 48.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken",
+      "rice",
+      "corn gluten meal",
+      "wheat",
+      "beet pulp"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hill's Science Diet",
+    "life_stage": "puppy",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_033",
+    "name": "Pet Naturals of Vermont Calming Chews for Dogs",
+    "description": "These calming chews are formulated with natural ingredients to help reduce stress and anxiety in dogs. Perfect for travel or stressful situations.",
+    "price": 24.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken liver",
+      "L-theanine",
+      "chamomile",
+      "thiamine"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Pet Naturals of Vermont",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_034",
+    "name": "Greenies Original Dental Treats for Dogs",
+    "description": "These dental chews help reduce plaque and tartar buildup while freshening breath. They are made with natural ingredients and are perfect for dogs of all sizes.",
+    "price": 19.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "wheat flour",
+      "glycerin",
+      "natural chicken flavor",
+      "oat fiber",
+      "green tea extract"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Greenies",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_035",
+    "name": "Burt's Bees for Pets Natural Deshedding Shampoo",
+    "description": "This natural shampoo is specifically formulated to reduce shedding in dogs. It contains omega fatty acids and is pH balanced for your pet's skin.",
+    "price": 14.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "coconut oil",
+      "shea butter",
+      "vitamin E",
+      "beeswax"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Burt's Bees",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_036",
+    "name": "PetSafe Busy Buddy Bristle Bone Dog Toy",
+    "description": "This interactive dog toy features bristle-like nubs that help clean teeth while your dog chews. Perfect for keeping your dog engaged and entertained.",
+    "price": 15.99,
+    "target_pet": "dog",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "PetSafe",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_037",
+    "name": "PetFusion Tough Dog Puzzle Toy",
+    "description": "This interactive puzzle toy keeps your dog mentally stimulated while providing a fun challenge. It can be filled with treats for added excitement.",
+    "price": 29.99,
+    "target_pet": "dog",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "PetFusion",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_038",
+    "name": "Outward Hound Hide-A-Squirrel Puzzle Toy",
+    "description": "This plush puzzle toy encourages interactive play as dogs try to remove squeaky squirrels from their log. It’s perfect for mental stimulation and fun.",
+    "price": 24.99,
+    "target_pet": "dog",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "Outward Hound",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_039",
+    "name": "Tetra Aquatic Turtle Food",
+    "description": "This turtle food is specially formulated to provide complete nutrition for aquatic turtles, containing natural ingredients for healthy growth and vitality.",
+    "price": 10.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal",
+      "wheat flour"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_040",
+    "name": "Fluval Bug Bites Fish Food",
+    "description": "These fish food pellets are made with protein-rich black soldier fly larvae, providing a nutritious diet for tropical fish. They are formulated to enhance color and vitality.",
+    "price": 12.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "black soldier fly larvae",
+      "fish meal",
+      "wheat flour",
+      "corn gluten meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Fluval",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_041",
+    "name": "Tetra ReptoMin Floating Sticks",
+    "description": "These floating sticks provide complete nutrition for turtles and other aquatic reptiles. They are easy to digest and formulated to promote health.",
+    "price": 9.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "wheat flour",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_042",
+    "name": "PetSafe Healthy Pet Simply Feed Automatic Pet Feeder",
+    "description": "This automatic pet feeder allows you to schedule feeding times and portion sizes for your pet. Ideal for busy pet owners wanting to maintain a consistent feeding routine.",
+    "price": 129.99,
+    "target_pet": "dog",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "PetSafe",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_043",
+    "name": "Natural Balance L.I.D. Limited Ingredient Diets Sweet Potato & Fish Dog Food",
+    "description": "Designed for dogs with food sensitivities, this limited-ingredient dog food features sweet potatoes and fish as primary ingredients, providing complete and balanced nutrition.",
+    "price": 49.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "sweet potatoes",
+      "fish meal",
+      "potatoes",
+      "flaxseed",
+      "carrots"
+    ],
+    "dietary_tags": [
+      "limited-ingredient",
+      "grain-free"
+    ],
+    "brand": "Natural Balance",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_044",
+    "name": "Merrick Grain-Free Chicken & Sweet Potato Recipe",
+    "description": "This grain-free dog food made with real chicken and sweet potatoes supports your dog's energy needs and promotes healthy digestion.",
+    "price": 58.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "deboned chicken",
+      "sweet potatoes",
+      "potatoes",
+      "peas",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Merrick",
+    "life_stage": "all",
+    "size_category": "large"
+  },
+  {
+    "id": "prod_045",
+    "name": "Instinct Raw Boost Mixers Freeze-Dried Raw Dog Food",
+    "description": "These freeze-dried raw dog food mixers add a boost of protein to your dog's meals. Made with real meat and a blend of fruits and vegetables.",
+    "price": 42.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken",
+      "chicken liver",
+      "carrots",
+      "blueberries",
+      "pumpkin"
+    ],
+    "dietary_tags": [
+      "natural",
+      "grain-free"
+    ],
+    "brand": "Instinct",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_046",
+    "name": "Pawfect Pets Dog Training Treats",
+    "description": "These soft and chewy training treats are perfect for rewarding your dog during training sessions. Made with natural ingredients, they are great for dogs of all sizes.",
+    "price": 12.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken",
+      "oat flour",
+      "carrots",
+      "blueberries"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Pawfect Pets",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_047",
+    "name": "Earthborn Holistic Coastal Catch Grain-Free Dry Dog Food",
+    "description": "This grain-free dry dog food features high-quality fish as the main ingredient, perfect for dogs that need a diet rich in omega fatty acids for skin and coat health.",
+    "price": 59.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "fish meal",
+      "pearl millet",
+      "potatoes",
+      "blueberries",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Earthborn Holistic",
+    "life_stage": "all",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_048",
+    "name": "Rachael Ray Nutrish Zero Grain Natural Dry Dog Food",
+    "description": "Made with real turkey, this grain-free dry dog food is free of artificial preservatives, fillers, and by-products. Perfect for dogs with food sensitivities.",
+    "price": 48.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "turkey",
+      "potatoes",
+      "pea protein",
+      "chickpeas",
+      "carrots"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "natural"
+    ],
+    "brand": "Rachael Ray Nutrish",
+    "life_stage": "all",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_049",
+    "name": "Victor Hi-Pro Plus Dry Dog Food",
+    "description": "This high-protein dry dog food is formulated for active dogs, featuring beef, chicken, pork, and fish meals as primary ingredients. It's ideal for dogs that require a high-energy diet.",
+    "price": 49.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "beef meal",
+      "chicken meal",
+      "pork meal",
+      "fish meal",
+      "brown rice"
+    ],
+    "dietary_tags": [
+      "high-protein"
+    ],
+    "brand": "Victor",
+    "life_stage": "all",
+    "size_category": "large"
+  },
+  {
+    "id": "prod_050",
+    "name": "Nutro Ultra Grain-Free Dry Dog Food",
+    "description": "This grain-free dog food is made with a blend of high-quality protein sources, including chicken and lamb, along with nutrient-rich superfoods to support overall health.",
+    "price": 51.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "chicken",
+      "lamb meal",
+      "potatoes",
+      "chickpeas",
+      "spinach"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Nutro",
+    "life_stage": "adult",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_051",
+    "name": "Blue Buffalo Wilderness Cat Food with Chicken",
+    "description": "This high-protein dry cat food is packed with real chicken and is formulated to meet the needs of cats with an active lifestyle. Free from grains for easier digestion.",
+    "price": 45.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "deboned chicken",
+      "chicken meal",
+      "peas",
+      "potatoes",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Blue Buffalo",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_052",
+    "name": "Royal Canin Kitten Dry Cat Food",
+    "description": "This dry food is specially formulated for kittens, providing essential nutrients for growth and development. The kibble size is designed for small mouths.",
+    "price": 39.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken by-product meal",
+      "corn",
+      "wheat gluten",
+      "rice"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Royal Canin",
+    "life_stage": "kitten",
+    "size_category": "small"
+  },
+  {
+    "id": "prod_053",
+    "name": "Purina Pro Plan Focus Kitten Dry Cat Food",
+    "description": "This kitten food is formulated with real chicken and provides the necessary nutrients for healthy development and growth in young cats. Supports immune system health.",
+    "price": 35.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken",
+      "rice",
+      "corn gluten meal",
+      "animal fat",
+      "beet pulp"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Purina Pro Plan",
+    "life_stage": "kitten",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_054",
+    "name": "Hill's Science Diet Adult Indoor Cat Food",
+    "description": "This dry cat food is formulated for indoor cats with a focus on weight management and digestive health. It includes high-quality proteins and natural fibers.",
+    "price": 42.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken",
+      "corn",
+      "wheat gluten",
+      "brown rice"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hill's Science Diet",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_055",
+    "name": "Wellness CORE Grain-Free Indoor Cat Food",
+    "description": "This dry cat food is formulated with high-protein and grain-free ingredients, designed for indoor cats. It supports healthy weight management and digestion.",
+    "price": 46.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "deboned chicken",
+      "turkey meal",
+      "potatoes",
+      "peas",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Wellness",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_056",
+    "name": "Iams ProActive Health Adult Dry Cat Food",
+    "description": "Formulated with real chicken as the first ingredient, this dry cat food provides balanced nutrition for adult cats. It supports heart health and maintains a healthy weight.",
+    "price": 28.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken",
+      "corn gluten meal",
+      "whole grain corn",
+      "animal fat",
+      "beet pulp"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Iams",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_057",
+    "name": "Blue Buffalo Freedom Grain-Free Adult Cat Food",
+    "description": "This grain-free dry cat food is made with real chicken and features a blend of fruits and vegetables. It helps maintain healthy skin and coat.",
+    "price": 46.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "deboned chicken",
+      "chicken meal",
+      "potatoes",
+      "peas",
+      "blueberries"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "high-protein"
+    ],
+    "brand": "Blue Buffalo",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_058",
+    "name": "Purina Friskies Gravy Cravers Wet Cat Food",
+    "description": "This wet cat food features a delicious meat and gravy combination that cats can't resist. It’s formulated to provide complete and balanced nutrition.",
+    "price": 20.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken",
+      "water",
+      "liver",
+      "meat by-products",
+      "corn starch"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Friskies",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_059",
+    "name": "Fancy Feast Medleys White Meat Chicken & Garden Greens",
+    "description": "This gourmet medley features white meat chicken and garden greens in a delicate sauce. It provides high-quality protein and irresistible flavor for your cat.",
+    "price": 24.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "chicken",
+      "water",
+      "chicken liver",
+      "carrots",
+      "peas"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Fancy Feast",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_060",
+    "name": "Nutrish Zero Grain Natural Dry Cat Food",
+    "description": "This dry cat food is made with real turkey and no grains, fillers, or artificial preservatives. A great option for cats with sensitivities.",
+    "price": 39.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "turkey",
+      "potatoes",
+      "pea protein",
+      "chickpeas",
+      "carrots"
+    ],
+    "dietary_tags": [
+      "grain-free",
+      "natural"
+    ],
+    "brand": "Rachael Ray Nutrish",
+    "life_stage": "all",
+    "size_category": "medium"
+  },
+  {
+    "id": "prod_061",
+    "name": "PetSafe Drinkwell Original Pet Fountain",
+    "description": "This pet fountain encourages hydration by providing a continuous stream of fresh water. It's perfect for dogs and cats alike.",
+    "price": 49.99,
+    "target_pet": "dog",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "PetSafe",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_062",
+    "name": "Zymox Enzymatic Dog & Cat Ear Cleaner",
+    "description": "This ear cleaner utilizes natural enzymes to help clean and soothe the ears of your pet. It’s effective against ear infections and is safe for regular use.",
+    "price": 12.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "water",
+      "glycerin",
+      "enzymes"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Zymox",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_063",
+    "name": "Vet's Best Natural Dog Toothpaste",
+    "description": "This natural dog toothpaste promotes dental health using a blend of aloe, neem oil, and baking soda. It helps reduce plaque and freshens breath.",
+    "price": 9.99,
+    "target_pet": "dog",
+    "ingredients": [
+      "aloe",
+      "neem oil",
+      "baking soda",
+      "vitamin E"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Vet's Best",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_064",
+    "name": "Earthborn Holistic Cat Food with Tuna",
+    "description": "This high-quality dry cat food features tuna as the first ingredient, providing a protein-rich diet that cats love. It's designed to support overall health.",
+    "price": 47.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "tuna",
+      "brown rice",
+      "peas",
+      "potatoes",
+      "flaxseed"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Earthborn Holistic",
+    "life_stage": "adult",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_065",
+    "name": "Burt's Bees Natural Pet Shampoo for Cats",
+    "description": "This natural cat shampoo is pH balanced and made with nourishing ingredients like honey and chamomile to keep your cat's coat clean and healthy.",
+    "price": 12.99,
+    "target_pet": "cat",
+    "ingredients": [
+      "water",
+      "honey",
+      "cocamidopropyl betaine",
+      "chamomile extract"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Burt's Bees",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_066",
+    "name": "Catit Senses 2.0 Digger for Cats",
+    "description": "This interactive feeding accessory encourages natural foraging behavior in cats. It provides mental stimulation and helps slow down fast eaters.",
+    "price": 16.99,
+    "target_pet": "cat",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "Catit",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_067",
+    "name": "PetFusion Ultimate Cat Scratcher Lounge",
+    "description": "This multi-functional cat scratcher provides a place for your cat to scratch, lounge, and play. Made from recycled cardboard, it’s eco-friendly and durable.",
+    "price": 29.99,
+    "target_pet": "cat",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "PetFusion",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_068",
+    "name": "PawHut Cat Tree Tower",
+    "description": "This multi-level cat tree includes scratching posts, perches, and hideaways, providing your cat with a fun and engaging environment for play and relaxation.",
+    "price": 79.99,
+    "target_pet": "cat",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "PawHut",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_069",
+    "name": "PetSafe ScoopFree Premium Crystal Cat Litter",
+    "description": "This crystal cat litter absorbs moisture on contact and controls odors for up to 30 days, making it a convenient choice for cat owners.",
+    "price": 19.99,
+    "target_pet": "cat",
+    "ingredients": [],
+    "dietary_tags": [],
+    "brand": "PetSafe",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_070",
+    "name": "Tetra ColorFlakes Fish Food",
+    "description": "These color-enhancing flakes are perfect for tropical and coldwater fish, providing essential vitamins and minerals for vibrant colors and health.",
+    "price": 14.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "wheat flour",
+      "corn gluten meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_071",
+    "name": "API Pond Fish Food",
+    "description": "This floating pond fish food is specially formulated for koi and goldfish, providing essential nutrients for growth and health.",
+    "price": 25.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal",
+      "wheat germ"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "API",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_072",
+    "name": "Hikari Goldfish Food",
+    "description": "This premium goldfish food is formulated for all types of goldfish, providing a balanced diet for optimal health and growth.",
+    "price": 12.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal",
+      "wheat flour"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hikari",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_073",
+    "name": "Fluval Bug Bites Tropical Fish Food",
+    "description": "These protein-rich pellets are made from black soldier fly larvae, providing a nutritious and palatable diet for tropical fish.",
+    "price": 13.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "black soldier fly larvae",
+      "fish meal",
+      "wheat flour"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Fluval",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_074",
+    "name": "Hikari Cichlid Gold Fish Food",
+    "description": "This floating pellet food is formulated for cichlids, providing a balanced diet enriched with essential nutrients and color enhancers.",
+    "price": 19.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "wheat flour",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hikari",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_075",
+    "name": "Aqueon Goldfish Granules",
+    "description": "This nutritionally balanced granule food is designed specifically for goldfish, promoting health and vitality. It provides essential vitamins and nutrients.",
+    "price": 8.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "wheat flour"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Aqueon",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_076",
+    "name": "Tetra Min Tropical Flakes Fish Food",
+    "description": "These tropical fish flakes provide complete nutrition for a variety of tropical fish, ensuring they stay healthy and vibrant.",
+    "price": 10.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_077",
+    "name": "Aqueon Shrimp Pellets",
+    "description": "Specially formulated for freshwater shrimp, these pellets promote growth and vitality while providing essential nutrients.",
+    "price": 9.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "wheat flour"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Aqueon",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_078",
+    "name": "Tetra Goldfish Sticks",
+    "description": "These floating sticks provide a balanced diet for goldfish, promoting health and vitality. They are easy to digest and won't cloud your water.",
+    "price": 11.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "wheat flour"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_079",
+    "name": "Hikari Sinking Cichlid Gold Fish Food",
+    "description": "This sinking pellet food is designed for cichlids, providing a high-protein diet that supports growth and enhances color.",
+    "price": 18.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hikari",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_080",
+    "name": "Tetra Pond Goldfish Food",
+    "description": "This floating fish food is specially formulated for goldfish in ponds, providing balanced nutrition and supporting healthy growth.",
+    "price": 24.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_081",
+    "name": "Fluval Gourmet Fish Flakes",
+    "description": "These gourmet flakes are suitable for a variety of fish species, providing a high-quality diet that enhances color and vitality.",
+    "price": 15.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Fluval",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_082",
+    "name": "API Goldfish Flakes",
+    "description": "These goldfish flakes provide a balanced diet for your goldfish, promoting healthy growth and maintaining vibrancy.",
+    "price": 15.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "API",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_083",
+    "name": "Aqueon Betta Food",
+    "description": "This specialized food is designed for bettas, providing a balanced diet with high protein to maintain health and promote vibrant colors.",
+    "price": 7.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Aqueon",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_084",
+    "name": "Tetra GloFish Fish Food",
+    "description": "This specially designed food enhances the colors of GloFish, promoting vibrant and healthy fish. Suitable for various freshwater species.",
+    "price": 11.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_085",
+    "name": "Hikari Spirulina Fish Food",
+    "description": "This fish food is enriched with spirulina, providing essential nutrients for improved growth and vibrant colors in fish.",
+    "price": 19.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "spirulina",
+      "fish meal",
+      "corn gluten meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hikari",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_086",
+    "name": "Aqueon Goldfish Flakes",
+    "description": "These goldfish flakes provide a complete diet and are designed to support your fish's health and growth.",
+    "price": 10.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Aqueon",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_087",
+    "name": "API Betta Food",
+    "description": "Designed for bettas, this premium fish food provides a high-protein diet that supports vibrant colors and overall health.",
+    "price": 7.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "API",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_088",
+    "name": "Fluval Tropical Fish Food",
+    "description": "This tropical fish food provides a complete diet for various species, ensuring vibrant colors and optimal health.",
+    "price": 12.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Fluval",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_089",
+    "name": "Tetra Cichlid Flakes Fish Food",
+    "description": "These cichlid flakes are designed to provide a balanced diet for various cichlid species, promoting health and vitality.",
+    "price": 14.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_090",
+    "name": "Hikari Goldfish Floating Food Sticks",
+    "description": "These floating food sticks provide a balanced diet for goldfish, supporting their health and vitality.",
+    "price": 11.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hikari",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_091",
+    "name": "API Goldfish Color Flakes",
+    "description": "These goldfish flakes promote vibrant colors and provide complete nutrition for goldfish, ensuring they thrive.",
+    "price": 12.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "API",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_092",
+    "name": "Aqueon Shrimp Pellets",
+    "description": "These shrimp pellets provide a complete diet for shrimp and promote growth and vitality with essential nutrients.",
+    "price": 9.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Aqueon",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_093",
+    "name": "Hikari Cichlid Floating Pellets",
+    "description": "These floating pellets are perfect for cichlids, providing a high-protein diet that enhances color and supports growth.",
+    "price": 16.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hikari",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_094",
+    "name": "Tetra Marine Flakes Fish Food",
+    "description": "These marine flakes provide a complete diet for marine fish, ensuring vibrant colors and optimal health.",
+    "price": 14.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_095",
+    "name": "Fluval Color Enhancer Fish Food",
+    "description": "This color-enhancing food is designed to promote vibrant colors in tropical fish, ensuring they look their best.",
+    "price": 15.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Fluval",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_096",
+    "name": "Aqueon Tropical Flakes Fish Food",
+    "description": "These tropical flakes provide essential nutrients for a variety of tropical fish, promoting health and vitality.",
+    "price": 10.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Aqueon",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_097",
+    "name": "Tetra Goldfish Food Sticks",
+    "description": "These floating sticks are formulated to provide complete nutrition for goldfish, promoting their health and growth.",
+    "price": 12.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_098",
+    "name": "Hikari Betta Floating Pellets",
+    "description": "These floating pellets are designed for bettas, providing a balanced diet that supports health and vibrant colors.",
+    "price": 8.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Hikari",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_099",
+    "name": "Tetra GloFish Betta Food",
+    "description": "This specialized food is designed for GloFish bettas, providing a nutritious diet that enhances color and promotes health.",
+    "price": 10.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "Tetra",
+    "life_stage": "all",
+    "size_category": "all"
+  },
+  {
+    "id": "prod_100",
+    "name": "API Tropical Fish Food Flakes",
+    "description": "These tropical fish food flakes provide a balanced diet for various tropical fish, promoting health and vibrant colors.",
+    "price": 11.99,
+    "target_pet": "fish",
+    "ingredients": [
+      "fish meal",
+      "corn gluten meal",
+      "soybean meal"
+    ],
+    "dietary_tags": [
+      "natural"
+    ],
+    "brand": "API",
+    "life_stage": "all",
+    "size_category": "all"
+  }
+]
