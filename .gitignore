@@ -32,6 +32,7 @@ ENV/
 # IDE
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
 *~
@@ -44,7 +45,13 @@ Thumbs.db
 database/*.db
 database/*.sqlite
 database/*.sqlite3
+customer_memory.db
 vector_store/chroma_data/
+chroma_db/
+data/products.json
 
 # Streamlit
 .streamlit/
+
+# Tutorial files (contains interview-specific content)
+VECTOR_SEARCH_TUTORIAL.md

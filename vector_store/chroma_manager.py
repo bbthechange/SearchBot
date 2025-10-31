@@ -1,5 +1,5 @@
 """
-Chroma Vector Store Manager for Chewy Pet Chatbot
+Chroma Vector Store Manager for Pet Product Chatbot
 Manages vector embeddings for product search and retrieval
 """
 

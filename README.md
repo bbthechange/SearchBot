@@ -1,284 +1,280 @@
-# Chewy Pet Product Chatbot - Phase 1
+# Pet Product Chatbot with Vector Search
 
-A conversational AI assistant for pet product recommendations using vector search and natural language understanding.
+An intelligent conversational AI assistant for pet product recommendations using semantic search, natural language understanding, and customer memory.
 
-## Project Overview
+## Overview
 
-This chatbot prototype helps customers find the perfect pet products by understanding natural language queries and searching through a product catalog using semantic similarity. The system supports multiple pet types (dogs, cats, birds, fish) and handles complex requirements like dietary restrictions, allergies, and budget constraints.
+This chatbot prototype demonstrates modern AI/ML techniques for e-commerce search:
+- **Vector Search**: Semantic similarity using embeddings to understand query intent
+- **NLU**: GPT-based intent extraction and entity recognition
+- **Multi-turn Conversations**: Context-aware dialogue with reference resolution
+- **Customer Memory**: Persistent profiles for personalized recommendations
 
-### Architecture
+The system supports multiple pet types (dogs, cats, birds, fish) and handles complex requirements like dietary restrictions, allergies, budget constraints, and negative intent ("salmon-free", "grain-free").
 
-- **Frontend**: Streamlit chat interface with debug mode
-- **Vector Store**: ChromaDB for semantic product search
-- **Database**: SQLite for customer/pet profiles and preferences
-- **LLM**: OpenAI GPT-4o-mini for product generation and (later) intent classification
-- **Embeddings**: OpenAI embeddings for vector search
+## Key Features
 
-### Project Status
+### 1. Semantic Search with Negative Intent
+- Understands "salmon-free" means exclude salmon (not search for salmon)
+- Handles synonyms: "hypoallergenic" → "limited-ingredient"
+- Combines vector similarity with metadata filtering
 
-**Phase 1 (Current)**: Complete scaffolding with UI, database, and product data
-- Product catalog generation
-- Database schema and CRUD operations
-- Streamlit chat interface shell
-- ChromaDB setup (placeholder functions)
+### 2. Natural Language Understanding
+- Zero-shot intent extraction using GPT function calling
+- Extracts entities: pet type, dietary restrictions, price ranges, brands
+- No training data required - works out of the box
 
-**Phase 2 (Next)**: Implement vector search and NLU components
-- Product embedding and ingestion
-- Intent classification
-- Entity extraction
-- Semantic search with filtering
+### 3. Multi-Turn Context
+- Resolves references: "cheaper options" calculates from last results
+- Accumulates filters: "also without chicken" adds to existing exclusions
+- Inherits context across conversation turns
 
-## Setup Instructions
+### 4. Customer Profiles
+- Persists pet information and allergies across sessions
+- Automatically applies saved preferences
+- Supports multiple pets per customer
+
+## Tech Stack
+
+- **Frontend**: Streamlit chat interface with debug panels
+- **Vector DB**: ChromaDB for semantic product search
+- **LLM**: OpenAI GPT-4o-mini for NLU and data generation
+- **Embeddings**: OpenAI text-embedding-3-small (1536 dimensions)
+- **Database**: SQLite for customer profiles and preferences
+- **Memory**: Conversation state with Redis-ready architecture
+
+## Setup
 
 ### Prerequisites
 
-- Python 3.9 or higher
+- Python 3.10+
 - OpenAI API key ([Get one here](https://platform.openai.com/api-keys))
 
 ### Installation
 
-1. **Clone or navigate to the project directory**
+1. **Clone the repository**
    ```bash
-   cd /path/to/chatSearch
+   git clone <your-repo-url>
+   cd chatSearch
    ```
 
-2. **Create a virtual environment**
+2. **Create virtual environment**
    ```bash
    python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. **Activate the virtual environment**
-
-   On macOS/Linux:
-   ```bash
-   source venv/bin/activate
-   ```
-
-   On Windows:
-   ```bash
-   venv\Scripts\activate
-   ```
-
-4. **Install dependencies**
+3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-5. **Set up environment variables**
+4. **Configure environment**
    ```bash
    cp .env.example .env
+   # Edit .env and add your OpenAI API key
    ```
 
-   Edit `.env` and add your OpenAI API key:
+5. **Generate product catalog**
+   ```bash
+   python scripts/generate_products.py
    ```
-   OPENAI_API_KEY=your_actual_api_key_here
-   ```
+   This creates 100 realistic pet products with ingredients, dietary tags, and prices.
 
-### Generate Product Catalog
+### Running the Application
 
-Generate 100 realistic pet products using OpenAI:
-
+**Option 1: Command-line demos**
 ```bash
-python scripts/generate_products.py
+# Test vector search
+python product_search.py
+
+# Test NLU intent extraction
+python nlu.py
+
+# Test complete chatbot with multi-turn
+python chatbot.py
+
+# Test memory systems
+python memory.py
 ```
 
-This will create `data/products.json` with the product catalog. The script will display:
-- Progress information
-- Sample products
-- Distribution statistics (dog/cat/bird/fish)
-
-### Initialize Database
-
-Initialize the SQLite database with schema:
-
-```bash
-python database/db_manager.py
-```
-
-This creates `database/chatbot.db` with tables for customers, pets, and preferences.
-
-### Run the Application
-
-Launch the Streamlit chat interface:
-
+**Option 2: Streamlit UI**
 ```bash
 streamlit run app.py
 ```
-
-The app will open in your browser at `http://localhost:8501`
+Opens at `http://localhost:8501`
 
 ## Project Structure
 
 ```
 chatSearch/
-├── app.py                          # Streamlit chat interface
-├── requirements.txt                # Python dependencies
-├── .env.example                    # Environment variables template
-├── .env                           # Your environment variables (not in git)
-├── .gitignore                     # Git ignore rules
-├── README.md                      # This file
+├── app.py                      # Streamlit chat interface
+├── product_search.py           # Vector search implementation
+├── nlu.py                      # NLU with GPT function calling
+├── chatbot.py                  # Complete chatbot integration
+├── memory.py                   # Conversation & customer memory
+├── requirements.txt            # Python dependencies
+├── .env.example                # Environment template
 │
 ├── data/
-│   └── products.json              # Generated product catalog (100 items)
+│   └── products.json           # Generated product catalog
 │
 ├── database/
-│   ├── schema.sql                 # SQLite database schema
-│   ├── db_manager.py              # Database CRUD operations
-│   └── chatbot.db                 # SQLite database file (created after init)
+│   ├── schema.sql              # Database schema
+│   ├── db_manager.py           # CRUD operations
+│   └── customer_memory.db      # SQLite database (created at runtime)
 │
 ├── scripts/
-│   └── generate_products.py       # Product catalog generator
+│   └── generate_products.py   # Synthetic data generator
 │
-└── vector_store/
-    ├── chroma_manager.py          # ChromaDB vector store manager
-    └── chroma_data/               # Chroma persistence directory (created at runtime)
+├── vector_store/
+│   └── chroma_manager.py       # ChromaDB utilities
+│
+└── chroma_db/                  # Chroma persistence (created at runtime)
 ```
 
-## Usage
+## Example Queries
 
-### Basic Chat Interface
+The chatbot understands complex natural language:
 
-1. Launch the app with `streamlit run app.py`
-2. Type messages in the chat input
-3. The bot will respond (Phase 1: placeholder responses)
+```
+User: "salmon-free dog food"
+→ Excludes products with salmon in ingredients
 
-### Debug Mode
+User: "cheaper options"
+→ Calculates price_max from previous results
 
-- Toggle "Debug Mode" in the sidebar to see:
-  - Intent classification (Phase 2)
-  - Entity extraction (Phase 2)
-  - Vector search results (Phase 2)
-  - Context used for personalization (Phase 2)
+User: "also without chicken"
+→ Adds chicken to existing exclusions
 
-### Customer Context
+User: "what about for cats instead?"
+→ Switches pet type, keeps other filters
 
-The sidebar shows customer profile information including:
-- Customer ID
-- Registered pets
-- Saved preferences
+User: "My golden retriever is allergic to chicken"
+→ Saves to database, auto-applies in future sessions
+```
 
-## Database Schema
+## Architecture Highlights
 
-### Customers Table
-- `id`: Primary key
-- `name`: Customer name
-- `created_at`: Timestamp
+### Vector Search Pipeline
+```
+Query: "salmon-free dog food"
+  ↓
+[1. NLU] Extract intent: {pet: "dog", exclusions: ["salmon"]}
+  ↓
+[2. Embed] Convert query to 1536-dim vector
+  ↓
+[3. Search] ChromaDB similarity + metadata filtering
+  ↓
+[4. Rank] Return top-k products
+```
 
-### Pets Table
-- `id`: Primary key
-- `customer_id`: Foreign key to customers
-- `name`: Pet name
-- `pet_type`: dog, cat, bird, fish, or other
-- `breed`: Breed information
-- `allergies_json`: JSON array of allergies
-- `created_at`: Timestamp
+### Memory Architecture
+- **Short-term**: Conversation context (Redis-ready, currently in-memory)
+- **Long-term**: Customer profiles (SQLite, production: PostgreSQL)
+- **Hybrid**: Merges saved preferences with current query
 
-### Preferences Table
-- `id`: Primary key
-- `customer_id`: Foreign key to customers
-- `preference_key`: Preference name (e.g., "budget_max", "dietary_preference")
-- `preference_value`: Preference value
-- `created_at`: Timestamp
+### NLU vs Traditional Search
+| Traditional Keyword Search | Vector Search + NLU |
+|---------------------------|---------------------|
+| "salmon-free" finds "salmon" ❌ | Understands exclusion ✅ |
+| "grain free" ≠ "grain-free" ❌ | Same semantic meaning ✅ |
+| Can't understand synonyms ❌ | "hypoallergenic" → results ✅ |
 
-## Product Data Structure
+## Production Considerations
 
-Each product in `data/products.json` has:
+This is a prototype demonstrating core concepts. For production:
 
+**Scalability:**
+- Migrate ChromaDB → Pinecone/Weaviate (millions of products)
+- Redis for session storage (distributed state)
+- PostgreSQL for customer profiles (ACID compliance)
+
+**Cost Optimization:**
+- Self-host embedding model (sentence-transformers)
+- Cache common query embeddings (Redis)
+- Fine-tune smaller model for NLU (distillation from GPT)
+
+**Reliability:**
+- Implement retry logic and fallbacks
+- Monitor embedding quality and search relevance
+- A/B test retrieval strategies
+
+**Security:**
+- Input validation and sanitization
+- Rate limiting on API calls
+- PII handling for customer data
+
+## Development
+
+### Database Schema
+
+**customers**: id, name, email, created_at
+
+**pets**: id, customer_id, name, pet_type, breed, allergies (JSON), life_stage, size_category
+
+**preferences**: id, customer_id, preference_key, preference_value
+
+### Product Schema
 ```json
 {
   "id": "prod_001",
-  "name": "Product Name",
-  "description": "Detailed product description",
-  "price": 29.99,
+  "name": "Blue Buffalo Life Protection Formula",
+  "description": "Premium dog food with real meat...",
+  "price": 49.99,
   "target_pet": "dog",
-  "ingredients": ["chicken", "rice", "vegetables"],
-  "dietary_tags": ["grain-free", "high-protein"],
-  "brand": "Brand Name",
+  "ingredients": ["chicken", "brown rice", "barley"],
+  "dietary_tags": ["natural", "high-protein"],
+  "brand": "Blue Buffalo",
   "life_stage": "adult",
   "size_category": "medium"
 }
 ```
 
-## Next Steps (Phase 2)
+## Key Concepts Demonstrated
 
-### Vector Search Implementation
-1. Implement `add_products()` in `chroma_manager.py`
-   - Create product text representations
-   - Generate embeddings using OpenAI
-   - Ingest into ChromaDB with metadata
+1. **Embeddings**: Text → semantic vectors for similarity search
+2. **Hybrid Search**: Vector similarity + structured metadata filtering
+3. **Function Calling**: LLM structured output for intent extraction
+4. **Context Resolution**: "cheaper" calculates from conversation state
+5. **Memory Layers**: Short-term (session) + long-term (persistent)
 
-2. Implement `search_products()` in `chroma_manager.py`
-   - Support natural language queries
-   - Apply metadata filters
-   - Return ranked results with scores
+## Cost Estimates
 
-### NLU Components
-1. Intent Classification
-   - Detect user intent: search, filter, question, etc.
-   - Use OpenAI or fine-tuned model
+Prototype usage:
+- Embedding 100 products: $0.0002
+- Per query: ~$0.00012 (NLU + embedding)
+- 1000 queries: ~$0.12
 
-2. Entity Extraction
-   - Extract: pet type, dietary tags, price range, brand, etc.
-   - Use structured output from LLM
-
-3. Context Management
-   - Track conversation history
-   - Maintain user preferences
-   - Handle multi-turn dialogues
-
-### Chatbot Logic
-1. Implement `process_user_message()` in `app.py`
-   - Integrate intent classification
-   - Call vector search with filters
-   - Generate contextual responses
-
-2. Implement `get_debug_info()` in `app.py`
-   - Show intent/entities
-   - Display retrieved products
-   - Explain reasoning
-
-## Development Notes
-
-- All code uses type hints and docstrings
-- TODOs are marked for Phase 2 implementation
-- The Streamlit app is fully functional (with placeholder responses)
-- Database operations use context managers for safety
-- ChromaDB is configured to persist data locally
-
-## Dependencies
-
-- `langchain==0.1.0` - LLM application framework
-- `langchain-openai==0.0.5` - OpenAI integration for LangChain
-- `chromadb==0.4.22` - Vector database for embeddings
-- `streamlit==1.31.0` - Web UI framework
-- `openai==1.12.0` - OpenAI API client
-- `python-dotenv==1.0.0` - Environment variable management
-- `sqlalchemy==2.0.25` - SQL toolkit (future use)
+Production optimization can reduce to $0.00001/query with caching and self-hosted models.
 
 ## Troubleshooting
 
-### OpenAI API Key Error
-If you see "OPENAI_API_KEY not found":
-1. Ensure `.env` file exists in project root
-2. Verify the API key is correctly set in `.env`
-3. Restart the terminal/application after adding the key
+**OpenAI API Key Error**
+- Verify `.env` file exists and contains valid key
+- Restart application after adding key
 
-### Module Import Errors
-If you see "No module named X":
-1. Ensure virtual environment is activated
-2. Run `pip install -r requirements.txt`
-3. Check Python version (3.9+)
+**Module Not Found**
+- Activate virtual environment: `source venv/bin/activate`
+- Reinstall: `pip install -r requirements.txt`
 
-### Streamlit Port Already in Use
-If port 8501 is busy:
+**Port Already in Use**
 ```bash
 streamlit run app.py --server.port 8502
 ```
 
 ## License
 
-This is a prototype project for demonstration purposes.
+MIT License - feel free to use for learning and experimentation.
 
-## Contact
+## Acknowledgments
 
-For questions or issues, please refer to the project documentation or create an issue in the repository.
+Built with:
+- [OpenAI](https://openai.com) for embeddings and LLM
+- [ChromaDB](https://www.trychroma.com/) for vector storage
+- [LangChain](https://python.langchain.com/) for LLM orchestration
+- [Streamlit](https://streamlit.io/) for UI
+
+---
+
+**Note**: This is a demonstration prototype showcasing AI/ML techniques for semantic search and NLU. Not intended for production use without additional hardening, testing, and optimization.

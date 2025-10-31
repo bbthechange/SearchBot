@@ -1,5 +1,5 @@
 """
-Database Manager for Chewy Pet Chatbot
+Database Manager for Pet Product Chatbot
 Handles SQLite database initialization and CRUD operations
 """
 
