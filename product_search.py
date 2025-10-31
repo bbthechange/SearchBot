@@ -15,6 +15,57 @@ from config import get_openai_api_key
 # Initialize OpenAI client
 client = OpenAI(api_key=get_openai_api_key())
 
+# Cache for ingredient expansions (avoid repeated API calls)
+_requirement_expansion_cache = {}
+
+
+def expand_requirement_with_gpt(requirement: str) -> List[str]:
+    """
+    Use GPT to expand a category requirement to specific ingredients.
+
+    This uses GPT's domain knowledge instead of hardcoding mappings!
+
+    Examples:
+        "grain" → ["rice", "barley", "wheat", "oats", "corn", "rye", "millet"]
+        "fish" → ["salmon", "tuna", "cod", "tilapia", "whitefish", "pollock"]
+        "meat" → ["beef", "pork", "lamb", "venison"]
+
+    Args:
+        requirement: Category term (e.g., "grain", "fish", "poultry")
+
+    Returns:
+        List of specific ingredients in that category
+    """
+    # Check cache first
+    if requirement in _requirement_expansion_cache:
+        return _requirement_expansion_cache[requirement]
+
+    # Ask GPT to expand the category
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{
+            "role": "user",
+            "content": f"""List ALL specific food ingredients in the category "{requirement}".
+
+Examples:
+- "grain" → rice, barley, wheat, oats, corn, rye, millet, quinoa
+- "fish" → salmon, tuna, cod, tilapia, whitefish, pollock, mackerel
+- "poultry" → chicken, turkey, duck
+
+Return ONLY a comma-separated list, no explanations."""
+        }],
+        temperature=0  # Deterministic for caching
+    )
+
+    text = response.choices[0].message.content.strip()
+    expanded = [item.strip().lower() for item in text.split(',')]
+
+    # Cache the result
+    _requirement_expansion_cache[requirement] = expanded
+
+    print(f"   🔍 Expanded '{requirement}' → {expanded[:5]}{'...' if len(expanded) > 5 else ''}")
+    return expanded
+
 
 class ProductSearch:
     """
@@ -164,10 +215,9 @@ class ProductSearch:
         if requirements:
             print(f"   ➕ Adding: {requirements}")
             for requirement in requirements:
-                # Boost with related terms
-                boost_text = requirement
-                if requirement.lower() == "grain":
-                    boost_text = "whole grain rice barley oats wheat"
+                # Use GPT to expand requirement to specific ingredients (no hardcoding!)
+                expanded = expand_requirement_with_gpt(requirement)
+                boost_text = f"{requirement} " + " ".join(expanded[:10])  # Use top 10 expansions
 
                 req_response = client.embeddings.create(
                     model="text-embedding-3-small",
@@ -281,15 +331,20 @@ class ProductSearch:
                 # Post-filter for dietary requirements (must have ALL)
                 if dietary_requirements:
                     ingredients_str = metadata.get('ingredients', '').lower()
-                    # For "grain", check for any grain type
-                    if 'grain' in [r.lower() for r in dietary_requirements]:
-                        has_grain = any(g in ingredients_str for g in ['rice', 'barley', 'wheat', 'oat', 'corn', 'grain'])
-                        if not has_grain:
-                            continue  # Skip if doesn't have grain
-                    else:
-                        # For other requirements, check literally
-                        if not all(req.lower() in ingredients_str for req in dietary_requirements):
-                            continue
+
+                    # Use GPT to expand each requirement to specific ingredients
+                    has_all_requirements = True
+                    for req in dietary_requirements:
+                        # Expand category to specific ingredients (e.g., "grain" → rice, barley, etc.)
+                        expanded_ingredients = expand_requirement_with_gpt(req)
+
+                        # Check if ANY of the expanded ingredients are present
+                        if not any(item in ingredients_str for item in expanded_ingredients):
+                            has_all_requirements = False
+                            break
+
+                    if not has_all_requirements:
+                        continue  # Skip this product
 
                 # Calculate similarity score (Chroma returns distance, convert to similarity)
                 distance = results['distances'][0][i]
