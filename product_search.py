@@ -9,14 +9,11 @@ from typing import List, Dict, Optional
 from openai import OpenAI
 import chromadb
 from chromadb.utils import embedding_functions
-from dotenv import load_dotenv
 import numpy as np
-
-# Load environment
-load_dotenv()
+from config import get_openai_api_key
 
 # Initialize OpenAI client
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=get_openai_api_key())
 
 
 class ProductSearch:
@@ -41,7 +38,7 @@ class ProductSearch:
 
         # Create/get collection with OpenAI embedding function
         openai_ef = embedding_functions.OpenAIEmbeddingFunction(
-            api_key=os.getenv("OPENAI_API_KEY"),
+            api_key=get_openai_api_key(),
             model_name="text-embedding-3-small"
         )
 

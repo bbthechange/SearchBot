@@ -9,10 +9,9 @@ import json
 import os
 from typing import Dict, List, Optional
 from openai import OpenAI
-from dotenv import load_dotenv
+from config import get_openai_api_key
 
-load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=get_openai_api_key())
 
 
 # Define the function schema (like Alexa intent schema, but more flexible)
