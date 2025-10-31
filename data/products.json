@@ -13,8 +13,7 @@
       "peas"
     ],
     "dietary_tags": [
-      "natural",
-      "grain-free"
+      "natural"
     ],
     "brand": "Blue Buffalo",
     "life_stage": "adult",
@@ -115,8 +114,7 @@
       "blueberries"
     ],
     "dietary_tags": [
-      "natural",
-      "grain-free"
+      "natural"
     ],
     "brand": "Zuke's",
     "life_stage": "all",
@@ -578,8 +576,7 @@
       "carrots"
     ],
     "dietary_tags": [
-      "natural",
-      "grain-free"
+      "natural"
     ],
     "brand": "Solid Gold",
     "life_stage": "puppy",
@@ -873,7 +870,7 @@
   },
   {
     "id": "prod_047",
-    "name": "Earthborn Holistic Coastal Catch Grain-Free Dry Dog Food",
+    "name": "Earthborn Holistic Coastal Catch Dry Dog Food",
     "description": "This grain-free dry dog food features high-quality fish as the main ingredient, perfect for dogs that need a diet rich in omega fatty acids for skin and coat health.",
     "price": 59.99,
     "target_pet": "dog",
@@ -885,7 +882,6 @@
       "flaxseed"
     ],
     "dietary_tags": [
-      "grain-free",
       "high-protein"
     ],
     "brand": "Earthborn Holistic",
