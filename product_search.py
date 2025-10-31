@@ -35,14 +35,20 @@ class ProductSearch:
         Args:
             collection_name: Name of the Chroma collection to use
         """
-        # TODO 1: Initialize Chroma client
-        # Hint: Use chromadb.Client() for in-memory, or PersistentClient() for disk storage
-        self.chroma_client = None  # REPLACE THIS
+        # Initialize Chroma client
+        self.chroma_client = chromadb.PersistentClient(path="./chroma_db")
 
-        # TODO 2: Create/get collection with OpenAI embedding function
-        # Hint: Use chroma_client.get_or_create_collection()
-        # Hint: Use embedding_functions.OpenAIEmbeddingFunction()
-        self.collection = None  # REPLACE THIS
+        # Create/get collection with OpenAI embedding function
+        openai_ef = embedding_functions.OpenAIEmbeddingFunction(
+            api_key=os.getenv("OPENAI_API_KEY"),
+            model_name="text-embedding-3-small"
+        )
+
+        self.collection = self.chroma_client.get_or_create_collection(
+            name=collection_name,
+            embedding_function=openai_ef,
+            metadata={"description": "Pet product catalog with semantic search"}
+        )
 
         print(f"Initialized ProductSearch with collection: {collection_name}")
 
@@ -74,27 +80,38 @@ class ProductSearch:
         metadatas = []
 
         for product in products:
-            # TODO 3a: Add product ID
             ids.append(product["id"])
 
-            # TODO 3b: Create document text (what gets embedded)
-            # Hint: Combine name + description for rich semantic content
+            # Create document text (what gets embedded)
             # Example: "Blue Buffalo Life Protection Formula Dog Food. This premium dry dog food..."
-            doc_text = "REPLACE THIS"  # YOUR CODE HERE
+            doc_text = f"{product['name']}. {product['description']}"
             documents.append(doc_text)
 
-            # TODO 3c: Create metadata dict
-            # Hint: Include ingredients, dietary_tags, price, target_pet, brand, etc
-            # Hint: Convert lists to comma-separated strings for Chroma compatibility
+            # Create metadata dict
             metadata = {
-                # YOUR CODE HERE
-                # Example: "ingredients": ",".join(product["ingredients"])
+                "product_id": product["id"],
+                "name": product["name"],
+                "price": product["price"],
+                "target_pet": product["target_pet"],
+                "brand": product["brand"],
+                "life_stage": product.get("life_stage", "all"),
+                "size_category": product.get("size_category", "all"),
+                "ingredients": ",".join(product.get("ingredients", [])),
+                "dietary_tags": ",".join(product.get("dietary_tags", [])),
+                # Add boolean flags for common allergens
+                "has_salmon": "salmon" in ",".join(product.get("ingredients", [])).lower(),
+                "has_chicken": "chicken" in ",".join(product.get("ingredients", [])).lower(),
+                "has_grain": any(g in ",".join(product.get("ingredients", [])).lower()
+                                for g in ["wheat", "corn", "grain", "barley", "rice"]),
             }
             metadatas.append(metadata)
 
-        # TODO 4: Add to collection
-        # Hint: Use self.collection.add(ids=..., documents=..., metadatas=...)
-        # YOUR CODE HERE
+        # Add to collection
+        self.collection.add(
+            ids=ids,
+            documents=documents,
+            metadatas=metadatas
+        )
 
         print(f"Successfully loaded {len(products)} products into vector store!")
 
@@ -125,32 +142,72 @@ class ProductSearch:
         if target_pet:
             print(f"   For: {target_pet}")
 
-        # TODO 5: Build metadata filter (WHERE clause)
-        # This is how we handle NEGATIVE INTENT!
-        # Hint: Chroma uses {"field": {"$operator": value}} syntax
-        # Hint: For exclusions, we need to ensure ingredients DON'T contain excluded items
-
+        # Build metadata filter (WHERE clause)
         where_filter = None
-        if dietary_exclusions or target_pet:
-            where_filter = {}
-            # YOUR CODE HERE
-            # Example for target_pet: {"target_pet": {"$eq": target_pet}}
-            # Example for exclusions: Need to check if ingredients contain excluded items
-            # Note: This is tricky! You may need to rethink data structure
+        conditions = []
+        if target_pet:
+            conditions.append({"target_pet": {"$eq": target_pet}})
 
-        # TODO 6: Query the collection
-        # Hint: Use self.collection.query(
-        #           query_texts=[query],
-        #           where=where_filter,
-        #           n_results=max_results
-        #       )
-        results = None  # YOUR CODE HERE
+        if dietary_exclusions:
+            # Use boolean flags
+            for exclusion in dietary_exclusions:
+                if exclusion.lower() == "salmon":
+                    conditions.append({"has_salmon": {"$eq": False}})
+                elif exclusion.lower() == "chicken":
+                    conditions.append({"has_chicken": {"$eq": False}})
+                elif exclusion.lower() in ["grain", "grains"]:
+                    conditions.append({"has_grain": {"$eq": False}})
 
-        # TODO 7: Format results
-        # Hint: Chroma returns {ids, documents, metadatas, distances}
+        # Build final filter
+        if len(conditions) == 0:
+            where_filter = None
+        elif len(conditions) == 1:
+            where_filter = conditions[0]  # Single condition, no $and needed
+        else:
+            where_filter = {"$and": conditions}  # Multiple conditions, wrap in $and
+
+        # Query the collection
+        results = self.collection.query(
+            query_texts=[query],  # Chroma will embed this
+            where=where_filter,
+            n_results=max_results * 3  # Get extra results for post-filtering
+        )
+
+        # Format results
+        # Chroma returns {ids, documents, metadatas, distances}
         # Transform into list of dicts with product info + similarity score
         formatted_results = []
-        # YOUR CODE HERE
+
+        if results and results['ids'] and len(results['ids'][0]) > 0:
+            for i in range(len(results['ids'][0])):
+                metadata = results['metadatas'][0][i]
+
+                # Post-filter for dietary exclusions (if not using boolean flags)
+                if dietary_exclusions:
+                    ingredients_str = metadata.get('ingredients', '').lower()
+                    # Check if any exclusion is in ingredients
+                    if any(exclusion.lower() in ingredients_str for exclusion in dietary_exclusions):
+                        continue  # Skip this product
+
+                # Calculate similarity score (Chroma returns distance, convert to similarity)
+                distance = results['distances'][0][i]
+                similarity = 1 - distance  # Closer to 1 = more similar
+
+                formatted_results.append({
+                    "id": results['ids'][0][i],
+                    "name": metadata.get('name'),
+                    "similarity": similarity,
+                    "brand": metadata.get('brand'),
+                    "price": metadata.get('price'),
+                    "target_pet": metadata.get('target_pet'),
+                    "ingredients": metadata.get('ingredients'),
+                    "dietary_tags": metadata.get('dietary_tags'),
+                    "description": results['documents'][0][i]
+                })
+
+                # Stop when we have enough results
+                if len(formatted_results) >= max_results:
+                    break
 
         return formatted_results
 
