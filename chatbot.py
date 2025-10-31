@@ -81,6 +81,7 @@ class PetProductChatbot:
         results = self.search_engine.search(
             query=resolved_intent.get("query", user_message),
             dietary_exclusions=resolved_intent.get("dietary_exclusions"),
+            dietary_requirements=resolved_intent.get("dietary_requirements"),
             target_pet=resolved_intent.get("target_pet"),
             max_results=5
         )
